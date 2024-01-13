@@ -27,6 +27,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
+  "resolutions": {
+    "react-refresh": "~0.14.0"
+  },
   "version": "1.0.0",
   "private": true,
   "name": "app"

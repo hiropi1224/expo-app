@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { router } from "expo-router";
 
 export default function Page() {
   return (
@@ -6,6 +8,25 @@ export default function Page() {
       <View style={styles.main}>
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <Link href="/settings/">Settings</Link>
+        <Link href="/settings/" asChild>
+          <Pressable
+            onPress={() => {
+              router.push("/settings/");
+            }}
+          >
+            push Settings
+          </Pressable>
+        </Link>
+        <Link href="/settings/" asChild>
+          <Pressable
+            onPress={() => {
+              router.replace("/settings/");
+            }}
+          >
+            replace Settings
+          </Pressable>
+        </Link>
       </View>
     </View>
   );

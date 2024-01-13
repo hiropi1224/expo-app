@@ -1,11 +1,19 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Settings</Text>
-        <Text style={styles.subtitle}>This is the settings page of your app.</Text>
+        <Text style={styles.subtitle}>
+          This is the settings page of your app.
+        </Text>
+        <Link href="/" asChild>
+          <Pressable>
+            <Text>Home</Text>
+          </Pressable>
+        </Link>
       </View>
     </View>
   );

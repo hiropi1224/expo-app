@@ -1,13 +1,19 @@
-import { useLocalSearchParams } from 'expo-router';
+import { Link, Stack, useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
-const { slug } = useLocalSearchParams();
+  const { slug } = useLocalSearchParams();
 
   return (
     <View style={styles.container}>
+      <Stack.Screen
+        options={{
+          title: String(slug),
+        }}
+      />
       <View style={styles.main}>
         <Text style={styles.title}>{slug}</Text>
+        <Link href="/blog/">Blog Top</Link>
       </View>
     </View>
   );

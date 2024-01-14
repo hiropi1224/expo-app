@@ -27,3 +27,7 @@ npx expo start --tunnel
 ## 公式ドキュメント
 
 - [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+
+
+## now 
+https://docs.expo.dev/router/layouts/#native-layouts

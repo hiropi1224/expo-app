@@ -10,29 +10,29 @@ export default function Page() {
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
         <View style={styles.linkArea}>
-        <Link href="/settings/">Settings</Link>
-        <Link href="/settings/" asChild>
-          <Pressable
-            onPress={() => {
-              router.push("/settings/");
-            }}
+          <Link href="/blog/">Blog</Link>
+          <Link href="/blog/" asChild>
+            <Pressable
+              onPress={() => {
+                router.push("/blog/");
+              }}
             >
-            <Text>push Settings</Text>
-          </Pressable>
-        </Link>
-        <Link href="/settings/" asChild>
-          <Pressable
-            onPress={() => {
-              router.replace("/settings/");
-            }}
+              <Text>push Blog</Text>
+            </Pressable>
+          </Link>
+          <Link href="/blog/" asChild>
+            <Pressable
+              onPress={() => {
+                router.replace("/blog/");
+              }}
             >
-            <Text>replace Settings</Text>
-          </Pressable>
-        </Link>
-            <Link href="/pop-to/">PopToTopアクションデモ</Link>
-            <Link href="/stack/home">Stackレイアウトデモ</Link>
-            <Link href="/settings/">Unmatched Routeデモ</Link>
-            </View>
+              <Text>replace Blog</Text>
+            </Pressable>
+          </Link>
+          <Link href="/pop-to/">PopToTopアクションデモ</Link>
+          <Link href="/stack/home">Stackレイアウトデモ</Link>
+          <Link href="/settings/">Unmatched Routeデモ</Link>
+        </View>
       </View>
     </View>
   );
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   linkArea: {
     marginTop: 8,
-    justifyContent:"flex-start",
-    gap:8,
-  }
+    justifyContent: "flex-start",
+    gap: 8,
+  },
 });

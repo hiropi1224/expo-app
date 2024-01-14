@@ -16,7 +16,7 @@ export default function Page() {
               router.push("/settings/");
             }}
           >
-            push Settings
+            <Text>push Settings</Text>
           </Pressable>
         </Link>
         <Link href="/settings/" asChild>
@@ -25,7 +25,7 @@ export default function Page() {
               router.replace("/settings/");
             }}
           >
-            replace Settings
+            <Text>replace Settings</Text>
           </Pressable>
         </Link>
       </View>

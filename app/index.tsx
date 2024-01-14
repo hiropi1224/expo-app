@@ -9,13 +9,14 @@ export default function Page() {
       <View style={styles.main}>
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <View style={styles.linkArea}>
         <Link href="/settings/">Settings</Link>
         <Link href="/settings/" asChild>
           <Pressable
             onPress={() => {
               router.push("/settings/");
             }}
-          >
+            >
             <Text>push Settings</Text>
           </Pressable>
         </Link>
@@ -24,10 +25,14 @@ export default function Page() {
             onPress={() => {
               router.replace("/settings/");
             }}
-          >
+            >
             <Text>replace Settings</Text>
           </Pressable>
         </Link>
+            <Link href="/pop-to/">PopToTopアクションデモ</Link>
+            <Link href="/stack/home">Stackレイアウトデモ</Link>
+            <Link href="/settings/">Unmatched Routeデモ</Link>
+            </View>
       </View>
     </View>
   );
@@ -54,4 +59,9 @@ const styles = StyleSheet.create({
     fontSize: 36,
     color: "#38434D",
   },
+  linkArea: {
+    marginTop: 8,
+    justifyContent:"flex-start",
+    gap:8,
+  }
 });

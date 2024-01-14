@@ -1,18 +1,22 @@
 import { Stack } from "expo-router/stack";
+import {
+  ThemeProvider,
+  DarkTheme,
+
+} from "@react-navigation/native";
 
 export default function Layout() {
   return (
-    <Stack
-      screenOptions={{
-        title:"Header",
-        headerStyle: {
-          backgroundColor: "#f4511e",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    />
+    <ThemeProvider value={DarkTheme}>
+      <Stack
+        screenOptions={{
+          title: "Header",
+          headerTintColor: DarkTheme.colors.text,
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      />
+    </ThemeProvider>
   );
 }

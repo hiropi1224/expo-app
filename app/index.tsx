@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { router } from "expo-router";
+import { DarkTheme } from "@react-navigation/native";
 
 export default function Page() {
   return (
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 64,
     fontWeight: "bold",
+    color: DarkTheme.colors.text,
   },
   subtitle: {
     fontSize: 36,

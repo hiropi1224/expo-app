@@ -1,25 +1,9 @@
-import { createInterFont } from "@tamagui/font-inter";
-import { shorthands } from "@tamagui/shorthands";
-import { themes, tokens } from "@tamagui/themes";
+import { config as configBase } from "@tamagui/config";
+
 import { createTamagui } from "tamagui";
-
-const headingFont = createInterFont();
-const bodyFont = createInterFont();
-
-const appConfig = createTamagui({
-  themes,
-  tokens,
-  shorthands,
-  fonts: {
-    heading: headingFont,
-    body: bodyFont,
-  },
-});
-
-export type AppConfig = typeof appConfig;
-
+export const config = createTamagui(configBase);
+export default config;
+export type Conf = typeof config;
 declare module "tamagui" {
-  interface TamaguiCustomConfig extends AppConfig {}
+  interface TamaguiCustomConfig extends Conf {}
 }
-
-export default appConfig;

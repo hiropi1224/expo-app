@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
 import { DarkTheme } from "@react-navigation/native";
+import { Link, Stack } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ headerTitle: "Blog" }} />
       <View style={styles.main}>
-        <Text style={styles.title}>Blog Page</Text>
+        {/* <Text style={styles.title}>Blog Page</Text> */}
+        <Text className={`font-bold text-6xl ${DarkTheme.colors.text}`}>
+          Blog Page
+        </Text>
         <Text style={styles.subtitle}>This is the Blog page of your app.</Text>
         <Link href="/">Go Back Home</Link>
         <View style={styles.linkArea}>
